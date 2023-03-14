@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="/css/login.css" rel="stylesheet" type="text/css">
+    
+</head>
+
+<body>
+    <div class="master">
+        <div class="container">
+            <div class="bg">
+                <form action="/index3" method="post">
+
+                    <div class="container">
+                        <div class="a1">
+                            <img src="/image/logo.svg" height="100px" width="100px">
+                            <h2>Welcome Back!</h2>
+                        </div>
+
+
+                        <label for="email" style="color: white;"><b>Email</b></label>
+                        <input type="text" name="email" id="email" required />
+                        <p class="valid"><%=str%></p>
+
+                        <label for="pwd" style="color: white;"><b>Password</b></label>
+                        <input type="password" name="pwd" id="pwd" required />
+                        <p class="valid">
+                            <%=str1%>
+                        </p>
+
+                        <div>
+                            <p style="color: white;">Forget Password?<a href="#">ClickHere.</a>.</p>
+                        </div>
+                    <input type="submit" id="sub" value="Sign up" style="color: white;" />
+       
+                    </div>
+                    <div class="im">
+                        <img src="/image/bottom-logo.png">
+                    </div>
+                </form>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

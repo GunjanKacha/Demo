@@ -1,0 +1,74 @@
+ .bg {
+     height: 780px;
+     width: 100%;
+     background-image: url(/image/auth-bg.png);
+ }
+
+ form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 30%;
+     height: 100%;
+     background-color: #2a2c2e80;
+     margin-left: 130px;
+ }
+
+ .b {
+     font-size: small;
+ }
+
+ .container {
+     display: flex;
+     flex-direction: column;
+
+ }
+
+ h1,
+ p {
+     text-align: center;
+     margin-top: 150px;
+ }
+
+ body {
+     font-family: Arial, Helvetica, sans-serif, ;
+ }
+
+ input {
+     margin: 0.25em 0em 1em 0em;
+ }
+
+ input {
+
+     outline: none;
+     padding: 5px;
+     border: none;
+
+     border-radius: 0.25em;
+     color: black;
+ }
+ #sub{
+    background-color: rgb(15, 85, 17);
+ }
+
+ button {
+     padding: 0.75em;
+     border: none;
+     outline: none;
+     background-color: rgb(15, 85, 17);
+     color: white;
+     border-radius: 0.25em;
+ }
+
+ button:hover {
+     cursor: pointer;
+     background-color: rgb(5, 118, 37);
+ }
+
+ .a1 h2 {
+     color: white;
+ }
+
+ .im {
+     margin-left: 1450px;
+ }

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-change</title>
+    <link rel="=stylesheet" href="style_tic.css">
+    <style>
+      td:hover {
+        background-color: yellow;
+      }
+      </style>
+</head>
+<body>
+   <h2 style="text-align: center; margin-top: 5%; color: blueviolet; font-family: Verdana,
+   Geneva, Tahoma, sans-serif;">Kuku-Kube Puzzle Game</h2>
+    <center> <table id="table1" border="1px" style="height: 250px; width: 250px; margin-top: 5%; background-color: blanchedalmond;" ></table></center>
+    <p id="timer" style="font-size: 30px; font-weight: 900; text-align: center; color: blueviolet; font-family: Verdana,
+    Geneva, Tahoma, sans-serif;"></p>
+     
+      <script>
+       let gk1 = document.getElementById('table1');
+       let gk2 = ""
+       let gunjan_row = 3
+       let gunjan_col = 3
+
+
+       let gunjanr = Math.floor(Math.random() * (255 - 1) + 1)
+       let gunjang = Math.floor(Math.random() * (255 - 1) + 1)
+       let gunjanb = Math.floor(Math.random() * (255 - 1) + 1)
+
+       let randomr = Math.floor(Math.random() * (gunjan_row - 1) + 1)
+       let randomc = Math.floor(Math.random() * (gunjan_col - 1) + 1)
+
+
+
+       var counter_gk = 61;
+            var interval_gk = setInterval(function(){
+               counter_gk--;
+               if(counter_gk<=0){
+                  clearInterval(interval_gk);
+                  document.getElementById("timer").innerHTML="TimeOver !";
+                  document.getElementById("table1").style.visibility="hidden";
+               }
+               else{
+                  document.getElementById("timer").innerHTML=counter_gk;
+
+               }
+            },1000);
+
+       for(i=0;i<gunjan_row;i++){
+         gk2 = gk2 + "</tr>";
+         for(j=0;j<gunjan_col;j++){
+            if(i==randomr && j==randomc){
+               gk2 = gk2 + "<td style=background-color:rgba(" +gunjanr +','+ gunjang +',' + gunjanb+','+0.8+ "); onclick=increase1()></td>";
+            }
+            else{
+               gk2 = gk2 + "<td style=background-color:rgb(" +gunjanr +','+ gunjang +',' + gunjanb+")></td>";
+            }
+           
+         }
+         gk2 += "</tr>";
+       }
+       gk1.innerHTML = gk2
+
+
+       
+       function increase1(){
+
+           
+        let gk2 = ""
+        let gunjanr = Math.floor(Math.random() * (255 - 1) + 1)
+       let gunjang = Math.floor(Math.random() * (255 - 1) + 1)
+       let gunjanb = Math.floor(Math.random() * (255 - 1) + 1)
+
+       let randomr = Math.floor(Math.random() * (gunjan_row - 1) + 1)
+       let randomc = Math.floor(Math.random() * (gunjan_col - 1) + 1)
+
+        if(gunjan_row<9 && gunjan_col<9){
+         gunjan_row = gunjan_row+1
+         gunjan_col = gunjan_col+1
+        }
+        for(i=0;i<gunjan_row;i++){
+         gk2 = gk2 + "</tr>";
+         for(j=0;j<gunjan_col;j++){
+            if(i==randomr && j==randomc){
+               gk2 = gk2 + "<td style=background-color:rgba(" +gunjanr +','+ gunjang +',' + gunjanb+','+0.8+ "); onclick=increase1()></td>";
+            }
+            else{
+               gk2 = gk2 + "<td style=background-color:rgb(" +gunjanr +','+ gunjang +',' + gunjanb+")></td>";
+            }
+         }
+         gk2 += "</tr>";
+       }
+       gk1.innerHTML = gk2
+    }
+   </script>
+</body>
+</html>
